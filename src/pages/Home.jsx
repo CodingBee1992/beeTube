@@ -1,20 +1,19 @@
-import Feed from "../components/Feed"
-import Sidebar from "../components/Sidebar"
+import { useState } from 'react'
+import Feed from '../components/Feed'
+import Sidebar from '../components/Sidebar'
 
+const Home = ({ sidebar }) => {
+	const [category, setCategory] = useState(0)
+	console.log(category);
+	return (
+		<div className="flex">
+			<Sidebar sidebar={sidebar} category={category} setCategory={setCategory}/>
 
-const Home = ({sidebar}) => {
-
-
-
-  return (
-    <div className="flex">
-     <Sidebar sidebar={sidebar}/>
-
-     <div className={`w-full bg-[#f9f9f9] ${sidebar ? '' : ''}`}>
-      <Feed/>
-     </div>
-    </div>
-  )
+			<div className={`w-full bg-[#f9f9f9]  ${sidebar ? 'pl-0' : 'pl-2'} md:pl-0`} >
+				<Feed category={category}/>
+			</div>
+		</div>
+	)
 }
 
 export default Home

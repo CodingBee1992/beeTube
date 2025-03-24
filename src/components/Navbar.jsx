@@ -5,15 +5,16 @@ import uploadIcon from '../assets/upload.png'
 import moreIcon from '../assets/more.png'
 import notificationIcon from '../assets/notification.png'
 import profileIcon from '../assets/logoBee.jpg'
+import { Link } from 'react-router'
 const Navbar = ({setSidebar,sidebar}) => {
 	return (
 		<nav className="flex items-center justify-between p-4 sticky top-0 bg-[#fff] z-10 shadow-[0px_0px_10px_rgba(0,0,0,0.2)]">
 			<div className="flex items-center">
 				<img src={menuIcon} alt="" className="h-[20px] mr-5" onClick={()=>setSidebar(!sidebar)}/>
-				<div className="hidden sm:flex items-center gap-2 cursor-pointer">
+				<Link to={'/beeTube/'} className="hidden sm:flex items-center gap-2 cursor-pointer">
 					<img src={logo} alt="" className="w-[35px] h-[35px] rounded-full object-cover" />
 					<p className="font-semibold text-[20px]">beeTube</p>
-				</div>
+				</Link>
 			</div>
 
 			<div className="flex items-center">
