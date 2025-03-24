@@ -34,7 +34,7 @@ const Sidebar = ({sidebar}) => {
 					<p className="cursor-pointer hover:text-yellow-500 duration-300">Sports</p>
 				</div>
 				<div className="flex gap-5 items-center">
-					<img src={entertainment} alt="" className="min-w-[20px] w-[24px]" />
+					<img src={entertainment} alt="" className="min-w-[24px] w-[24px]" />
 					<p className="cursor-pointer hover:text-yellow-500 duration-300">Entertainment</p>
 				</div>
 				<div className="flex gap-5 items-center">

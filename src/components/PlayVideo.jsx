@@ -4,52 +4,87 @@ import dislike from '../assets/dislike.png'
 import share from '../assets/share.png'
 import save from '../assets/save.png'
 import bee from '../assets/logoBee.jpg'
-import userProfile from '../assets/user_profile.jpg'
+// import userProfile from '../assets/user_profile.jpg'
+
 const PlayVideo = () => {
-  return (
-    <div>
-        <video src={video1} controls autoPlay muted></video>
-        <h3>Best Youtube Channel</h3>
-        <div>
-            <p>777k Views &bull; in 24 hours</p>
-            <div>
-                <span><img src={like} alt="" />77777</span>
-                <span><img src={dislike} alt="" />0</span>
-                <span><img src={share} alt="" />Share</span>
-                <span><img src={save} alt="" />Save</span>
-            </div>
-        </div>
-        <hr />
-        <div>
-            <img src={bee} alt="" className='w-[60px] h-[60px] rounded-full'/>
-            <div>
-                <p>CodingBee</p>
-                <span>7M Subscribers</span>
-            </div>
-            
-            <button>Subscribe</button>
-        </div>
-        <div>
-            <p>Channel that makes learning Easy</p>
-            <p>Subscribe CodingBee to Watch More Tutorials on web development</p>
-            <hr />
-            <h4>777 Coments</h4>
-            <div>
-                <img src={userProfile} alt="" />
-                <div>
-                    <h3>Rico Puerto <span>~ day ago</span></h3>
-                    <p>The best beeTube channel</p>
-                    <div>
-                        <img src={like} alt="" />
-                        <span>777</span>
-                        <img src={dislike} alt="" />
-                        <span>0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
+	return (
+		<div className="basis-[69%] p-5">
+			<video src={video1} controls autoPlay muted className="w-full"></video>
+			<h3 className="mt-4 text-2xl font-semibold ">Best Youtube Channel</h3>
+			<div className="flex items-center justify-between text-[14px] text-[#5a5a5a]">
+				<p>777k Views &bull; in 24 hours</p>
+				<div className="flex items-center gap-4">
+					<span className="inline-flex gap-1 items-center">
+						<img src={like} alt="" className="w-[25px]" />
+						77777
+					</span>
+					<span className="inline-flex gap-1 items-center">
+						<img src={dislike} alt="" className="w-[25px]" />0
+					</span>
+					<span className="inline-flex gap-1 items-center">
+						<img src={share} alt="" className="w-[25px]" />
+						Share
+					</span>
+					<span className="inline-flex gap-1 items-center">
+						<img src={save} alt="" className="w-[25px]" />
+						Save
+					</span>
+				</div>
+			</div>
+			<hr className="h-[1px] border-none bg-[#ccc] m-[10px_0]" />
+			<div>
+				<div className='flex items-center gap-3 mb-4'>
+					<img src={bee} alt="" className="w-[50px] h-[50px] rounded-full" />
+					<div>
+						<p className="font-semibold">CodingBee</p>
+						<span className="text-[14px] text-[#5a5a5a]">7mln Subscribers</span>
+					</div>
+
+					<button className="px-5 py-2 rounded-3xl text-white bg-yellow-500 hover:bg-orange-500 duration-400 cursor-pointer">
+						Subscribe
+					</button>
+				</div>
+				<div className='ml-15 mb-3'>
+					<p>Channel that makes learning Easy</p>
+					<p>Subscribe CodingBee to Watch More Tutorials on web development</p>
+				</div>
+			</div>
+			<div className=''>
+				<hr className="h-[1px] border-none bg-[#ccc] m-[10px_0]"/>
+				<h4>777 Coments</h4>
+				<div className='flex gap-4 mt-4'>
+					<img src={bee} alt="" className="w-[50px] h-[50px] rounded-full" />
+					<div className='flex flex-col gap-2'>
+						<h3 className='font-semibold'>
+							Rico Puerto <span className='font-[400] text-[14px] text-[#5a5a5a]'>~ day ago</span>
+						</h3>
+						<p>The best beeTube channel</p>
+						<div className='flex gap-3 text-[14px] text-[#5a5a5a]'>
+							<img src={like} alt="" className='w-[20px]'/>
+							<span>777</span>
+							<img src={dislike} alt="" className='w-[20px]'/>
+							<span>0</span>
+						</div>
+					</div>
+				</div>
+				<div className='flex gap-4 mt-4'>
+					<img src={bee} alt="" className="w-[50px] h-[50px] rounded-full" />
+					<div className='flex flex-col gap-2'>
+						<h3 className='font-semibold'>
+							Rico Puerto <span className='font-[400] text-[14px] text-[#5a5a5a]'>~ day ago</span>
+						</h3>
+						<p>The best beeTube channel</p>
+						<div className='flex gap-3 text-[14px] text-[#5a5a5a]'>
+							<img src={like} alt="" className='w-[20px]'/>
+							<span>777</span>
+							<img src={dislike} alt="" className='w-[20px]'/>
+							<span>0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default PlayVideo
