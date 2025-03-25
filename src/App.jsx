@@ -8,7 +8,7 @@ const App = () => {
 
 	const [sidebar,setSidebar]= useState(true)
 
-	console.log(sidebar);
+	
 
 	return (
 		<div>

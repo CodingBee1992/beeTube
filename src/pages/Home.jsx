@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 
 const Home = ({ sidebar }) => {
 	const [category, setCategory] = useState(0)
-	console.log(category);
+	
 	return (
 		<div className="flex">
 			<Sidebar sidebar={sidebar} category={category} setCategory={setCategory}/>
