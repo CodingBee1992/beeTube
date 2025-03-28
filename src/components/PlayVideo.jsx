@@ -21,10 +21,10 @@ const PlayVideo = () => {
 
 	const handleClick = e => {
 		setTargetId(e.target.id)
-		console.log(targetId)
+		
 		setCommentOpen(!commentOpen)
 	}
-	console.log(commentOpen)
+	
 
 	const fetchData = async () => {
 		const videoData = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
@@ -122,7 +122,7 @@ const PlayVideo = () => {
 					<p
 						className={`${
 							isOpen ? 'h-full' : apiData ? (apiData.snippet.description.length > 0 ? 'h-[100px]' : 'h-0') : ''
-						} overflow-hidden`}>
+						} overflow-hidden break-words`}>
 						{apiData ? apiData.snippet.description : ''}
 					</p>
 					<button onClick={() => setIsOpen(!isOpen)} className="absolute bottom-[-1] cursor-pointer font-semibold">
@@ -141,7 +141,7 @@ const PlayVideo = () => {
 							alt=""
 							className="w-[50px] h-[50px] rounded-full"
 						/>
-						<div className="flex flex-col overflow-hidden  gap-2 mt-4">
+						<div className="flex flex-col  gap-2 mt-4">
 							<h3 className="font-semibold">
 								{item.snippet.topLevelComment.snippet.authorDisplayName}
 								<span className="font-[400] text-[14px] text-[#5a5a5a]">
@@ -153,8 +153,8 @@ const PlayVideo = () => {
 									item.snippet.topLevelComment.snippet.textDisplay.length >= 250 ? 'mb-8' : 'mb-0'
 								}`}>
 								<p
-									className={`relative overflow-hidden  ${item.id === targetId && commentOpen ? 'h-full' : ''} ${
-										item.snippet.topLevelComment.snippet.textDisplay.length >= 250 ? 'h-[80px] ' : 'h-fit'
+									className={`relative break-all overflow-hidden  ${item.id === targetId && commentOpen ? 'h-full' : ''} ${
+										item.snippet.topLevelComment.snippet.textDisplay.length >= 250 ? 'h-[80px] ' : 'h-full'
 									}`}>
 									{item.snippet.topLevelComment.snippet.textDisplay}
 									<div className={`absolute bottom-0 w-full h-[35px] ${item.snippet.topLevelComment.snippet.textDisplay.length >= 250 ? 'bg-linear-[to_top,#fff,50%,transparent]': ''} ${(commentOpen && item.snippet.topLevelComment.snippet.textDisplay.length >= 250 ? 'bg-none': '')}`}></div>

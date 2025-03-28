@@ -23,7 +23,7 @@ const Recommended = ({categoryId}) => {
 	useEffect(()=>{
 		fetchData()
 	},[])
-		console.log(apiData);
+		
 	return (
 		<div className='w-[100%] lg:w-[30%] mt-10 lg:mt-0'>
 			{apiData ? apiData.map(({snippet,id,statistics})=>(
