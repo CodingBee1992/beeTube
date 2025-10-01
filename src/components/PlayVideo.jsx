@@ -162,7 +162,7 @@ const PlayVideo = () => {
 								<span id={item.id} onClick={e => handleClick(e)} className="absolute bottom-[-2rem] font-semibold">
 									{item.id === targetId && commentOpen && item.snippet.topLevelComment.snippet.textDisplay.length >= 250
 										? '...less'
-										: item.snippet.topLevelComment.snippet.textDisplay.length >= 250
+										:  item.snippet.topLevelComment.snippet.textDisplay.length >= 250
 										? '...more'
 										: ''}
 								</span>
